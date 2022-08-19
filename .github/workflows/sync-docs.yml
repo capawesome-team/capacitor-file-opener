@@ -1,0 +1,68 @@
+name: Sync Docs
+
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync-docs:
+    if: github.repository == 'capawesome-team/capacitor-file-opener-sponsorware'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Sync `README.md`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'README.md'
+        destination_repo: 'capawesome-team/capacitor-file-opener'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `README.md`'
+    - name: Sync `CHANGELOG.md`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'CHANGELOG.md'
+        destination_repo: 'capawesome-team/capacitor-file-opener'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `CHANGELOG.md`'
+    - name: Sync `LICENSE`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'LICENSE'
+        destination_repo: 'capawesome-team/capacitor-file-opener'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `LICENSE`'
+    - name: Sync `.github/ISSUE_TEMPLATE/bug_report.md`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: '.github/ISSUE_TEMPLATE/bug_report.md'
+        destination_repo: 'capawesome-team/capacitor-file-opener'
+        destination_folder: '.github/ISSUE_TEMPLATE'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `.github/ISSUE_TEMPLATE/bug_report.md`'
+    - name: Sync `.github/ISSUE_TEMPLATE/feature_request.md`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: '.github/ISSUE_TEMPLATE/feature_request.md'
+        destination_repo: 'capawesome-team/capacitor-file-opener'
+        destination_folder: '.github/ISSUE_TEMPLATE'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `.github/ISSUE_TEMPLATE/feature_request.md`'
+
