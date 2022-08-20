@@ -9,7 +9,7 @@ import MobileCoreServices
     init(plugin: FileOpenerPlugin) {
         self.plugin = plugin
     }
-    
+
     @objc public func openFile(url: URL, mimeType: String?, completion: @escaping () -> Void) {
         if self.interactionController == nil {
             self.interactionController = UIDocumentInteractionController()
@@ -29,7 +29,7 @@ import MobileCoreServices
             completion()
         }
     }
-    
+
     @objc public func getFileUrlByPath(_ path: String) -> URL? {
         guard let url = URL.init(string: path) else {
             return nil
@@ -40,14 +40,14 @@ import MobileCoreServices
             return nil
         }
     }
-    
+
     private func getUtiFromMimeType(_ mimeType: String) -> String {
         guard let extUTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, mimeType as CFString, nil)?.takeUnretainedValue() else {
             return ""
         }
         return extUTI as String
     }
-    
+
     private func getUtiFromUrl(_ url: URL) -> String {
         let fileExtension = url.pathExtension as CFString
         guard let extUTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExtension, nil)?.takeUnretainedValue() else {

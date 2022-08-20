@@ -9,9 +9,9 @@ import Capacitor
 public class FileOpenerPlugin: CAPPlugin {
     public let errorPathMissing = "path must be provided."
     public let errorFileNotExist = "File does not exist."
-    
+
     private var implementation: FileOpener?
-    
+
     override public func load() {
         self.implementation = FileOpener(plugin: self)
     }
@@ -26,7 +26,7 @@ public class FileOpenerPlugin: CAPPlugin {
             call.reject(errorFileNotExist)
             return
         }
-        
+
         implementation?.openFile(url: url, mimeType: mimeType, completion: {
             call.resolve()
         })

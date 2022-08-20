@@ -2,16 +2,15 @@ package io.capawesome.capacitorjs.plugins.fileopener;
 
 import android.content.Intent;
 import android.net.Uri;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
-
 import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 
 public class FileOpener {
+
     private FileOpenerPlugin plugin;
 
     FileOpener(FileOpenerPlugin plugin) {
