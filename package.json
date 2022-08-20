@@ -17,11 +17,21 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/capawesome-team/capacitor-file-opener.git"
+    "url": "git+https://github.com/capawesome-team/sponsorware.git"
   },
   "bugs": {
     "url": "https://github.com/capawesome-team/capacitor-file-opener/issues"
   },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/capawesome-team/"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/capawesome"
+    }
+  ],
   "keywords": [
     "capacitor",
     "plugin",
