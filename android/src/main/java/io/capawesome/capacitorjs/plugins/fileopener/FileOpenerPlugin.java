@@ -6,17 +6,39 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
+import java.io.File;
+
 @CapacitorPlugin(name = "FileOpener")
 public class FileOpenerPlugin extends Plugin {
+    public static final String ERROR_PATH_MISSING = "path must be provided.";
+    public static final String ERROR_FILE_NOT_EXIST = "File does not exist.";
 
-    private FileOpener implementation = new FileOpener();
+    private FileOpener implementation;
+
+    @Override
+    public void load() {
+        implementation = new FileOpener(this);
+    }
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void openFile(PluginCall call) {
+        try {
+            String path = call.getString("path");
+            if (path == null) {
+                call.reject(ERROR_PATH_MISSING);
+                return;
+            }
+            String mimeType = call.getString("mimeType");
+            File file = implementation.getFileByPath(path);
+            if (file == null || !file.exists()) {
+                call.reject(ERROR_FILE_NOT_EXIST);
+                return;
+            }
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+            implementation.openFile(file, mimeType);
+            call.resolve();
+        } catch (Exception ex) {
+            call.reject(ex.getMessage());
+        }
     }
 }

@@ -7,12 +7,28 @@ import Capacitor
  */
 @objc(FileOpenerPlugin)
 public class FileOpenerPlugin: CAPPlugin {
-    private let implementation = FileOpener()
+    public let errorPathMissing = "path must be provided."
+    public let errorFileNotExist = "File does not exist."
+    
+    private var implementation: FileOpener?
+    
+    override public func load() {
+        self.implementation = FileOpener(plugin: self)
+    }
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func openFile(_ call: CAPPluginCall) {
+        guard let path = call.getString("path") else {
+            call.reject(errorPathMissing)
+            return
+        }
+        let mimeType = call.getString("mimeType")
+        guard let url = implementation?.getFileUrlByPath(path) else {
+            call.reject(errorFileNotExist)
+            return
+        }
+        
+        implementation?.openFile(url: url, mimeType: mimeType, completion: {
+            call.resolve()
+        })
     }
 }

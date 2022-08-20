@@ -1,10 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { FileOpenerPlugin } from './definitions';
+import type { FileOpenerPlugin, OpenFileOptions } from './definitions';
 
 export class FileOpenerWeb extends WebPlugin implements FileOpenerPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  public openFile(_options: OpenFileOptions): Promise<void> {
+    throw this.unimplemented('Not implemented on web.');
   }
 }
