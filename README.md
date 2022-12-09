@@ -7,11 +7,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
-  <!-- <a href="https://github.com/capawesome-team/capacitor-file-opener/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capawesome-team/capacitor-file-opener/CI/main?style=flat-square" /></a> -->
+  <a href="https://github.com/capawesome-team/capacitor-file-opener/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capawesome-team/capacitor-file-opener/CI/main?style=flat-square" /></a>
   <a href="https://github.com/capawesome-team/capacitor-file-opener"><img src="https://img.shields.io/github/license/capawesome-team/capacitor-file-opener?style=flat-square" /></a>
-<!-- <br> -->
-  <!-- <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-file-opener"><img src="https://img.shields.io/npm/dw/@capawesome-team/capacitor-file-opener?style=flat-square" /></a> -->
-  <!-- <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-file-opener"><img src="https://img.shields.io/npm/v/@capawesome-team/capacitor-file-opener?style=flat-square" /></a> -->
+<br>
+  <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-file-opener"><img src="https://img.shields.io/npm/dw/@capawesome-team/capacitor-file-opener?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-file-opener"><img src="https://img.shields.io/npm/v/@capawesome-team/capacitor-file-opener?style=flat-square" /></a>
   <a href="https://github.com/capawesome-team"><img src="https://img.shields.io/badge/part%20of-capawesome-%234f46e5?style=flat-square" /></a>
 </p>
 
@@ -29,8 +29,8 @@ This project is available as **Sponsorware**.
 
 This means...
 
-- The source code will be published as soon as [our GitHub Sponsors goal](https://github.com/sponsors/capawesome-team) is reached.
-- Any GitHub sponsor with a [sponsorware tier](https://github.com/sponsors/capawesome-team?frequency=recurring) gets **immediate access** to our sponsors-only repository and can start using the project right away.
+- New features will be published as soon as [our GitHub Sponsors goal](https://github.com/sponsors/capawesome-team) is reached.
+- Any GitHub sponsor with a [sponsorware tier](https://github.com/sponsors/capawesome-team?frequency=recurring) gets **immediate access** to the latest updates.
 
 ## Terms
 
@@ -38,8 +38,7 @@ This project is licensed under the terms of the MIT license.
 However, we kindly ask you to respect our **fair use policy**:
 
 - Please **don't distribute the source code** of the sponsors-only repository. You may freely use it for public, private or commercial projects, privately fork or mirror it, but please don't make the source code public, as it would counteract the sponsorware strategy.
-- If you cancel your subscription, you're automatically removed as a collaborator and will miss out on all future updates. However, **you may use the latest version that's available to you as long as you like**.
-
+- If you cancel your subscription, you're automatically removed as a collaborator and will no longer have access to the sponsors-only repository. However, **you may use the latest version that's available to you as long as you like**.
 
 ## Demo
 
@@ -62,9 +61,7 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 
 ## Installation
 
-As long as the project is available as [Sponsorware](#sponsorware), the project will be distributed via GitHub packages.
-
-1. Log in to GitHub package registry ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages)):
+1. (⭐ Insiders only) Log in to GitHub package registry ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages)) to get pre-access to the latest updates:
 
    ```
    $ npm login --scope=@capawesome-team --registry=https://npm.pkg.github.com
@@ -74,10 +71,11 @@ As long as the project is available as [Sponsorware](#sponsorware), the project 
    > Email: PUBLIC-EMAIL-ADDRESS
    ```
 
-1. In the same directory as your `package.json` file, create or edit an `.npmrc` file to include the following line ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)):
+1. (⭐ Insiders only) In the same directory as your `package.json` file, create or edit an `.npmrc` file to include the following line ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)):
    ```
    @capawesome-team:registry=https://npm.pkg.github.com
    ```
+
 1. Install the package:
 
    ```bash
@@ -85,7 +83,7 @@ As long as the project is available as [Sponsorware](#sponsorware), the project 
    npx cap sync
    ```
 
-   🆘 If you have any problems please [contact us by mail](mailto:support@capawesome.io) or [create a GitHub discussion](https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion) in this repository.  
+   🆘 If you have any problems please [create a GitHub discussion](https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion) in this repository.  
    ⚠️ **Attention**: Be careful not to disclose your npm auth token! If you have any questions (CI configuration etc.) please let us know.
 
 ## Configuration
