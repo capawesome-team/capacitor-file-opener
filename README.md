@@ -64,7 +64,7 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 1. (⭐ Insiders only) Log in to GitHub package registry ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages)) to get pre-access to the latest updates:
 
    ```
-   $ npm login --scope=@capawesome-team --registry=https://npm.pkg.github.com
+   $ npm login --scope=@capawesome-team --auth-type=legacy --registry=https://npm.pkg.github.com
 
    > Username: USERNAME
    > Password: TOKEN
