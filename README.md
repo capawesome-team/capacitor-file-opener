@@ -61,30 +61,14 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 
 ## Installation
 
-1. (⭐ Insiders only) Log in to GitHub package registry ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages)) to get pre-access to the latest updates:
+If you are an [Insider](https://capawesome.io/insiders/#what-is-insiders), see [Getting started with Insiders](https://capawesome.io/insiders/getting-started/?plugin=capacitor-file-opener) and follow the instructions to install the plugin.
 
-   ```
-   $ npm login --scope=@capawesome-team --auth-type=legacy --registry=https://npm.pkg.github.com
+If you are **not** an Insider, please install the package from the public npm registry:
 
-   > Username: USERNAME
-   > Password: TOKEN
-   > Email: PUBLIC-EMAIL-ADDRESS
-   ```
-
-1. (⭐ Insiders only) In the same directory as your `package.json` file, create or edit an `.npmrc` file to include the following line ([GitHub Docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)):
-   ```
-   @capawesome-team:registry=https://npm.pkg.github.com
-   ```
-
-1. Install the package:
-
-   ```bash
-   npm install @capawesome-team/capacitor-file-opener
-   npx cap sync
-   ```
-
-   🆘 If you have any problems please [create a GitHub discussion](https://docs.github.com/en/discussions/quickstart#creating-a-new-discussion) in this repository.  
-   ⚠️ **Attention**: Be careful not to disclose your npm auth token! If you have any questions (CI configuration etc.) please let us know.
+```bash
+npm install @capawesome-team/capacitor-file-opener
+npx cap sync
+```
 
 ## Configuration
 
