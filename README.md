@@ -29,17 +29,6 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 | ---------- | ---------- |
 | <img src="https://user-images.githubusercontent.com/13857929/185747140-7e59ca70-96c9-4d67-a3b3-8fd9c7eb1546.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/185747133-62a2b5e5-ff6f-4b30-871c-4c3609db7829.gif" width="266" /> |
 
-## FAQ
-
-1. **Which platforms are supported?**  
-   This plugin supports Android and iOS.
-1. **Which Capacitor versions are supported?**  
-   This plugin supports Capacitor 4.
-1. **What do I do when I have a feature request?**  
-   Please submit your feature request [here](https://github.com/capawesome-team/capacitor-file-opener/issues/new/choose). We will then review it and possibly put it on our roadmap.
-1. **What do I do when I have found a bug?**  
-   Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-file-opener/issues/new/choose). We will take a look at it as soon as possible.
-
 ## Installation
 
 If you are an [Insider](https://capawesome.io/insiders/#what-is-insiders), see [Getting started with Insiders](https://capawesome.io/insiders/getting-started/?plugin=capacitor-file-opener) and follow the instructions to install the plugin.
